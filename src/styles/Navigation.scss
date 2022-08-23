@@ -1,0 +1,19 @@
+.Navigation {
+    margin-bottom: 15px;
+
+    >nav {
+        display: flex;
+        justify-content: center;
+
+        >a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border: 2px solid #395B64;
+        }
+
+        >a.active {
+            background-color: red;
+        }
+    }
+}

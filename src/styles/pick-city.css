@@ -1,0 +1,14 @@
+.PickCity {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.PickCity input {
+  width: 200px;
+  height: 40px;
+  font-size: 2em;
+}
+.PickCity button {
+  width: 40px;
+  height: 40px;
+}

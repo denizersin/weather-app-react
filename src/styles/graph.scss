@@ -1,0 +1,88 @@
+    #graph {
+        margin: 20px 0;
+
+        >.navigation>nav {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+
+            >.menu {
+                padding: 4px;
+                border: 1px solid #395B64;;
+
+                cursor: pointer;
+                font-size: 1.3em;
+
+                &:hover {
+                    opacity: .8;
+                }
+
+                &.active {
+                    background-color: red;
+                    background-color: #395B64;
+                }
+            }
+        }
+
+
+        >.graphic {
+            font-size: 16px;
+            width: 100%;
+            height: 240px;
+            display: flex;
+            justify-content: center;
+
+            >.container {
+                padding: 10px;
+                display: flex;
+                flex-wrap: nowrap;
+                width: 100%;
+                height: 100%;
+                gap: 2px;
+                position: relative;
+
+                >.value-container {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    flex-grow: 1;
+                    gap: 5px;
+                    cursor: pointer;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+
+                    >.value {
+                        text-align: center;
+                    }
+
+                    >.line {
+                        width: 100%;
+                        border: 1px solid white;
+                        background-color: #395B64;
+                        transition: all .6s cubic-bezier(0.39, 0.575, 0.565, 1)
+                    }
+                }
+
+                >.value-container.active {
+                    opacity: .7;
+                    background-color: rgba(255, 255, 255, 0.275);
+                }
+
+                >#ball {
+                    position: absolute;
+                    width: 2px;
+                    height: 20px;
+                    z-index: 10;
+                    top: 20px;
+                    left: 0px;
+                    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    >svg {
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }

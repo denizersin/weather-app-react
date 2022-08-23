@@ -1,0 +1,128 @@
+#current-day {
+    display: flex;
+
+    >.col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 33%;
+    }
+
+    >.left {
+        gap: 4px;
+
+        >div {}
+
+        .city-name {
+            font-size: 2.5rem;
+        }
+
+        .day {
+            font-size: 1.5rem;
+        }
+
+        .current-hour {
+            font-size: 1.5rem;
+        }
+    }
+
+    >.center {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+
+        >div {
+            display: flex;
+            justify-content: center;
+        }
+
+        >.icon {
+            padding: 20px;
+
+            >i {
+                font-size: 9vmax;
+                color: #E7F6F2;
+                color: #cfebf3;
+            }
+        }
+    }
+
+    >.right {
+        >.container {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            gap: 10px;
+
+            >div {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            >div.humidity {
+                .humidity-value {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            >div>.max-value svg {
+                color: rgb(125, 6, 6);
+            }
+
+            >div>.min-value svg {
+                color: rgb(6, 121, 6);
+            }
+
+            >div>.humidity-value svg {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    #current-day {
+        >.col {}
+
+        >.left {
+
+            .city-name {
+                font-size: 1.9rem;
+            }
+
+            .day {
+                font-size: 1.5rem;
+
+            }
+
+            .current-hour {}
+        }
+
+        >.center {
+
+
+            >div {}
+
+            >.icon {
+
+                >i {}
+            }
+        }
+
+        >.right {
+            >.container {
+                width: 90%;
+                font-size: 13px;
+                gap: 5px;
+                >div>.humidity-value svg {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

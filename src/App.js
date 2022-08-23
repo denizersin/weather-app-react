@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Outlet } from 'react-router-dom';
+import Navigation from './pages/Navigation/Navigation';
 
-function App() {
+import "./styles/App.css"
+
+
+
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='app' className={'App component'}>
+      <span>App</span>
+      <Navigation />
+      <Outlet />
     </div>
-  );
+  )
 }
 
-export default App;
+
+export function promiseFor(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  })
+}
+
+

@@ -1,0 +1,35 @@
+#other-days {
+    margin-top: 40px;
+    width: 100%;
+    >.container {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        >.weather-card {
+            flex-shrink: 0;
+            padding: 10px;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            border: 1.4px solid #395B64;
+            cursor: pointer;
+            >div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            >.icon>i{
+                font-size: 20px;
+            }
+            >.day{
+                font-size: 13px;
+            }
+        }
+
+        >.active {
+            background-color: whitesmoke;
+            color: #2C3333;
+        }
+    }
+}
