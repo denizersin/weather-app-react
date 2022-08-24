@@ -22,7 +22,7 @@ export async function fetchCityData(city) {
     catch {
         return new Error();
     }
-    // const data = await (await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=${''}&appid=${API_KEY}`)).json();
+    const data = await (await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=${''}&appid=${API_KEY}`)).json();
 
     await promiseFor(500);
     return data;
